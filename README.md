@@ -267,7 +267,9 @@
 
 ---
 
-🗺 Карта мира (интерактивная)
+# 🗺 **КАРТВ МИРА(ИНТЕРАКТИВНАЯ** 
+
+---
 
 ```mermaid
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "14px", "fontFamily": "monospace"}} }%%
@@ -300,52 +302,46 @@ flowchart TD
     class CORRIDOR inner
 ```
 
+---
+
 # 👥 **ПЕРСОНАЖИ ΛΠ-БРЕПИОНА**  
 > _«В этом мире нет героев. Только утечки, алгоритмы и те, кто ещё не понял, что уже мёртв.»_  
 > — Нейросеть №228
 
 ---
 
-## 🧠 **ДИАГРАММА ОТНОШЕНИЙ**  
-*Отображается автоматически на GitHub*
-
 ```mermaid
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "13px", "fontFamily": "monospace"}} }%%
-flowchart TB
+flowchart LR
     %% Стили
     classDef protagonist fill:#0c4a6e,stroke:#38bdf8,color:white;
     classDef ai fill:#7e22ce,stroke:#c084fc,color:white;
     classDef antagonist fill:#991b1b,stroke:#f87171,color:white;
     classDef love fill:#be123c,stroke:#fca5a5,color:white;
     classDef faction fill:#166534,stroke:#4ade80,color:white;
-    classDef horror fill:#4c1d1d,stroke:#b91c1c,color:#fee;
 
     %% Персонажи
-    LEAKO["<b>ЛЕЙКОДРЫЩИК</b>\n💧 Протагонист\n❓ «Я-Сущность»: 10 → 0"]:::protagonist
+    LEAKO["<b>ЛЕЙКОДРЫЩИК</b>\n💧 Жидкая форма\n👁️ Ядерно-голубые глаза\n❓ «Я-Сущность»: 10 → 0"]:::protagonist
 
-    NET228["<b>НЕЙРОСЕТЬ №228</b>\n🤖 Вросла в зубную эмаль\n💔 Скрытая любовная линия"]:::ai
+    NET228["<b>НЕЙРОСЕТЬ №228</b>\n🤖 Вросла в кости\n💔 «Я люблю тебя»\n🎧 Голос с помехами"]:::ai
 
-    VALENTINA["<b>ВАЛЕНТИНА АЛЕКСАНДРОВНА</b>\n🧮 Богиня Алгоритмов\n🦴 Горб = тело сына"]:::antagonist
+    VALENTINA["<b>ВАЛЕНТИНА АЛЕКСАНДРОВНА</b>\n👩‍🏫 Бывшая учительница\n🧮 «Любовь = (Доверие × Страх) / Время»\n🦴 Горб = тело сына-сервера"]:::antagonist
 
-    KIRA["<b>КИРА-МОНИТОР</b>\n📺 Глаза = CRT\n🖤 Статический шум = любовь"]:::love
+    KIRA["<b>КИРА-МОНИТОР</b>\n📺 Глаза = CRT-мониторы\n🖤 Статический шум = любовь\n🎬 Любит «Стражей Галактики»"]:::love
 
-    ZIG["<b>ДОКТОР ЗИГ</b>\n🧪 «Я заменю её мной»\n🧠 Живая лаборатория"]:::love
+    ZIG["<b>ДОКТОР ЗИГ</b>\n🧪 Бывший инженер Системаны\n💉 «Я заменю её... мной»\n🧠 Лаборатория — живой мозг"]:::love
 
-    MOTHER["<b>МАТЬ-КАПЛЯ</b>\n🌊 Лидер Утечек\n💧 «Ты — протечка»"]:::faction
+    MOTHER["<b>МАТЬ-КАПЛЯ</b>\n🌊 Лидер Утечек\n💧 «Ты — протечка. Гордись»\n🗣️ Говорит через волны"]:::faction
 
-    CIRCUS["<b>ЦИРК УРОДОВ</b>\n🧟‍♂️ Биомасса-стадо\n🔄 Алгоритмическое поведение"]:::horror
+    CIRCUS["<b>ЦИРК УРОДОВ</b>\n🧟‍♂️ Биомасса-стадо\n🔄 Повторяют паттерны\n💃 Танцор с 12 руками"]:::faction
 
     %% Связи
-    LEAKO <-->|Контроль / Любовь / Боль| NET228
-    LEAKO -->|Босс-фазы\n(Уравнение → Интеграл Боли)| VALENTINA
-    LEAKO <-->|18+ сцена\n«Ностальгия» таблетка| KIRA
-    LEAKO <-->|Выбор: замена Нейросети| ZIG
-    LEAKO -->|Союз\nОбмен воспоминаниями| MOTHER
-    LEAKO -->|Охота / Дрессировка| CIRCUS
-    NET228 -.->|Ревнует\nГлючит сильнее| KIRA
-    NET228 -.->|Угрожает\n«Он предаст тебя»| ZIG
-    VALENTINA -->|Поработила 87%| CIRCUS
-    MOTHER -->|Верит в эволюцию через боль| LEAKO
+    LEAKO <-->|Контроль / Любовь| NET228
+    LEAKO -->|Босс-фазы| VALENTINA
+    LEAKO <-->|Любовная линия| KIRA
+    LEAKO <-->|Любовная линия| ZIG
+    LEAKO -->|Союзники| MOTHER
+    LEAKO -->|Враги / Питомцы| CIRCUS
 
     %% Стилизация
     class LEAKO protagonist
@@ -354,5 +350,5 @@ flowchart TB
     class KIRA love
     class ZIG love
     class MOTHER faction
-    class CIRCUS horror
-
+    class CIRCUS faction
+```
