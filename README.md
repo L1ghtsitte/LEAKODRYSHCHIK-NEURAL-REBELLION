@@ -264,3 +264,39 @@
 
 *© 3563, ΛΠ-БРЕПИОН. Все утечки защищены законом о цифровой боли.*  
 *Вы уже внутри.*
+
+---
+
+🗺 Карта мира (интерактивная)
+
+```mermaid
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "14px", "fontFamily": "monospace"}} }%%
+flowchart TD
+    %% Стили локаций
+    classDef city fill:#1e3a8a,stroke:#3b82f6,color:white;
+    classDef danger fill:#991b1b,stroke:#ef4444,color:white;
+    classDef secret fill:#7e22ce,stroke:#c084fc,color:white;
+    classDef inner fill:#0f172a,stroke:#64748b,color:#e2e8f0;
+    classDef hub fill:#0c4a6e,stroke:#0ea5e9,color:white;
+    classDef locked fill:#374151,stroke:#6b7280,color:#9ca3af;
+
+    %% Локации
+    NEUROPOL["<b>НЕЙРОПОЛЬ</b>\nГород-Сердце\n(Хаб мира)"]:::hub
+    TEMPLE["<b>ХРАМ АЛГОРИТМА</b>\nЛогово Валентины\nТребуется: Карта «Серая»"]:::danger
+    MARKET["<b>РЫНОК УТЕЧЕК</b>\nВнутри трупа Титана\nОбмен: Ксани / воспоминания"]:::secret
+    VOID["<b>СКВОЗНЯК-5</b>\nКвантовая станция\nТребуется: Карта «Чёрная»\n⚠️ Раскол личности"]:::locked
+    CORRIDOR["<b>ЧЁРНЫЙ КОРИДОР</b>\nПространство между мыслями\nДоступ: при «Я-Сущности» ≤ 8\nСекрет: Зеркало Последнего «Я»"]:::inner
+
+    %% Связи
+    NEUROPOL -->|Восток| TEMPLE
+    NEUROPOL -->|Запад| MARKET
+    NEUROPOL -->|Север| VOID
+    NEUROPOL -->|Провал в сознание| CORRIDOR
+
+    class NEUROPOL hub
+    class TEMPLE danger
+    class MARKET secret
+    class VOID locked
+    class CORRIDOR inner
+```
+
